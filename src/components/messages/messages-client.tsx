@@ -346,7 +346,7 @@ export default function MessagesClient({
                             "absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full border-2 border-background",
                             onlineMap.get(conv.partnerId)
                               ? "bg-emerald-500"
-                              : "bg-muted-foreground/40"
+                              : "bg-red-500"
                           )}
                         />
                       </div>
@@ -414,7 +414,7 @@ export default function MessagesClient({
               <span
                 className={cn(
                   "absolute bottom-0 right-0 h-2 w-2 rounded-full border-2 border-background",
-                  activePartnerOnline ? "bg-emerald-500" : "bg-muted-foreground/40"
+                  activePartnerOnline ? "bg-emerald-500" : "bg-red-500"
                 )}
               />
             </div>
@@ -424,7 +424,7 @@ export default function MessagesClient({
               </p>
               <p className={cn(
                 "text-xs",
-                activePartnerOnline ? "text-emerald-500" : "text-muted-foreground"
+                activePartnerOnline ? "text-emerald-500" : "text-red-500"
               )}>
                 {activePartnerOnline ? "Online" : activePartner.username ? `@${activePartner.username}` : "Offline"}
               </p>
