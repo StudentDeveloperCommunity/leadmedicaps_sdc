@@ -366,5 +366,3 @@ Review and tighten these before large-scale/public rollout.
 - Improve platform data normalization granularity and historical tracking.
 
 ---
-
-If you want, I can also generate a **short contributor guide** (`CONTRIBUTING.md`) and a **deployment checklist** tailored to Vercel + Firebase for your team.
