@@ -405,6 +405,31 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Campus Image */}
+      <section className="px-4 pb-14 sm:pb-16">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative overflow-hidden rounded-3xl border border-border/50 bg-card/40 shadow-2xl shadow-black/10"
+          >
+            <div className="relative aspect-[3/2] w-full">
+              <Image
+                src="/college.jpeg"
+                alt="Medicaps University campus"
+                fill
+                priority={false}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 1200px"
+                className="object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-primary/10" />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-border/40 py-8 px-4">
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
