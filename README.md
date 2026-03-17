@@ -733,6 +733,6 @@ Review and tighten these before large-scale/public rollout.
 - Integrate production email provider (Resend/Nodemailer) for contest notifications.
 - Tighten Next.js config security defaults.
 - Add automated tests (API + critical UI flows).
-- Improve platform data normalization granularity and historical tracking.
+- Improve platform data normalization granularity and historical tracking. 
 
 ---
