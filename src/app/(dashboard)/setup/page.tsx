@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import {
@@ -242,7 +243,7 @@ export default function SetupProfilePage() {
         {/* Logo */}
         <div className="flex items-center justify-center gap-2 mb-8">
           <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-            <Code2 className="h-4 w-4 text-white" />
+            <Image src="/favicon.svg" alt="LeadMedicaps" width={18} height={18} className="h-4 w-4" />
           </div>
           <span className="font-bold gradient-text">LeadMedicaps</span>
         </div>

@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  Code2,
   Trophy,
   Zap,
   Users,
@@ -84,7 +84,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 shrink-0">
             <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shrink-0">
-              <Code2 className="h-4 w-4 text-white" />
+              <Image src="/favicon.svg" alt="LeadMedicaps" width={18} height={18} className="h-4 w-4" />
             </div>
             <span className="font-bold text-lg gradient-text hidden sm:block">LeadMedicaps</span>
           </div>
@@ -409,7 +409,7 @@ export default function LandingPage() {
       <footer className="border-t border-border/40 py-8 px-4">
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <Code2 className="h-4 w-4" />
+            <Image src="/favicon.svg" alt="LeadMedicaps" width={16} height={16} className="h-4 w-4" />
             <span>LeadMedicaps — Medicaps University, Indore</span>
           </div>
           <div className="flex items-center gap-4 text-xs">

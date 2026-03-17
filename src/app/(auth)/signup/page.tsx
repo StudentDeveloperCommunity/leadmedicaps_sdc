@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Eye, EyeOff, Code2, Mail, Lock, User, AlertCircle, CheckCircle } from "lucide-react";
+import { Eye, EyeOff, Mail, Lock, User, AlertCircle, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -218,7 +219,7 @@ export default function SignUpPage() {
       <div className="absolute top-4 left-4">
         <Link href="/" className="flex items-center gap-2">
           <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-            <Code2 className="h-3.5 w-3.5 text-white" />
+            <Image src="/favicon.svg" alt="LeadMedicaps" width={16} height={16} className="h-3.5 w-3.5" />
           </div>
           <span className="text-sm font-semibold gradient-text">LeadMedicaps</span>
         </Link>
@@ -232,7 +233,7 @@ export default function SignUpPage() {
         <div className="rounded-2xl border border-border/60 glass p-6 sm:p-8 shadow-2xl shadow-black/10">
           <div className="text-center mb-8">
             <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-indigo-500/25">
-              <Code2 className="h-7 w-7 text-white" />
+              <Image src="/favicon.svg" alt="LeadMedicaps" width={28} height={28} className="h-7 w-7" />
             </div>
             <h1 className="text-2xl font-bold">Create an account</h1>
             <p className="text-muted-foreground text-sm mt-1">

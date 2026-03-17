@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { 
   LayoutDashboard, 
@@ -9,7 +10,6 @@ import {
   MessageSquare, 
   LogOut, 
   User,
-  Code2,
   Menu,
   X
 } from "lucide-react";
@@ -68,7 +68,7 @@ export function Navbar({ user }: NavbarProps) {
         {/* Logo */}
         <Link href={user ? "/dashboard" : "/"} className="flex items-center gap-2 group">
           <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
-            <Code2 className="h-4 w-4 text-white" />
+            <Image src="/favicon.svg" alt="LeadMedicaps" width={18} height={18} className="h-4 w-4" />
           </div>
           <span className="font-bold text-lg gradient-text hidden sm:block">
             LeadMedicaps
