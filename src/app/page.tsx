@@ -459,7 +459,7 @@ export default function LandingPage() {
               Gmail
             </a>
           </div>
-          <p>© 2025 LeadMedicaps. All rights reserved.</p>
+          <p>© SDC 2026 Medicaps University. All rights reserved.</p>
         </div>
       </footer>
     </div>
