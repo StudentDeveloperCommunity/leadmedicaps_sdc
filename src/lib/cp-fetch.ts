@@ -28,7 +28,7 @@ export async function fetchLeetCodeStats(username: string): Promise<LeetCodeStat
     method: "POST",
     headers: { "Content-Type": "application/json", Referer: "https://leetcode.com" },
     body: JSON.stringify({ query, variables: { username } }),
-    next: { revalidate: 3600 },
+    cache: "no-store",
   });
 
   if (!response.ok) throw new Error(`LeetCode API returned ${response.status}`);
@@ -66,11 +66,11 @@ export async function fetchLeetCodeStats(username: string): Promise<LeetCodeStat
 export async function fetchCodeforcesStats(username: string): Promise<CodeforcesStats> {
   const [userRes, subsRes] = await Promise.all([
     fetch(`https://codeforces.com/api/user.info?handles=${encodeURIComponent(username)}`, {
-      next: { revalidate: 3600 },
+      cache: "no-store",
     }),
     fetch(
       `https://codeforces.com/api/user.status?handle=${encodeURIComponent(username)}&from=1&count=10000`,
-      { next: { revalidate: 3600 } }
+      { cache: "no-store" }
     ),
   ]);
 
@@ -111,7 +111,7 @@ export async function fetchCodeforcesStats(username: string): Promise<Codeforces
 export async function fetchCodeChefStats(username: string): Promise<CodeChefStats> {
   const response = await fetch(
     `https://competeapi.vercel.app/user/codechef/${encodeURIComponent(username)}`,
-    { next: { revalidate: 3600 }, headers: { Accept: "application/json" } }
+    { cache: "no-store", headers: { Accept: "application/json" } }
   );
 
   if (!response.ok) throw new Error("User not found on CodeChef");
